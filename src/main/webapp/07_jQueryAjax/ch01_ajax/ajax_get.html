@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ajax_get.html</title>
+<script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$.get("aa.txt",function(data){
+		alert(data);//서버가 보내준 데이터
+		$('body').html(data);//클라이언트에 반영 <--javaScript를 inner html이라 표현하기도 한다?
+	});
+});
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

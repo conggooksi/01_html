@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test15_select_add_del.html</title>
+
+<script type="text/javascript">
+	function add() {
+		b1 = document.myForm.t1.value;//text 사용
+		b2 = document.myForm.t1.value;//value 사용
+		document.myForm.job.options[document.myForm.job.options.length] = new Option(b1, b2);//text,value
+
+		document.myForm.t1.value = "";//내용 삭제
+	}//add()-end
+
+	function del() {
+		m = document.myForm.job.options.selectedIndex;//index값을 얻는다
+		if(m!=0){
+			document.myForm.job.options[m]=null;//삭제
+		}
+	}//del()-end
+</script>
+</head>
+<body>
+	<form name="myForm">
+		<select name="job">
+			<option selected>직업선택
+			<option value="student">학생</option>
+			<option value="housewife">주부</option>
+			<option value="salman">회사원</option>
+			<option value="public-office">공무원</option>
+		</select>
+		<p>
+		<input type="text" name="t1"><p>
+		<input type="button" value="추가" onClick="add()">
+		<input type="button" value="삭제" onClick="del()">
+	</form>
+</body>
+</html>

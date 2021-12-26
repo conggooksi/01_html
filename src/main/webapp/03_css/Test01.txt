@@ -1,0 +1,93 @@
+Test01.txt
+css => cascade style sheet의 약자이다
+
+▶html로 표현할 수 없는 정교한 부분까지 속성을 한번에 지정하기 위해서 사용한다
+  <td colspan="2" align="center"></td>   <--! td는 태그이고 안에 들어간 변수?? 들이 속성-->
+  태그      속성			속성
+
+▶css는 단독으로 사용할 수 없고, html과 함께 사용한다(html 디자인 하기 위해 사용한다)
+
+▶HTML에서 사용 방법
+1. body부분에서 직접 사용
+
+2. head 태그 안에 디자인을 지정(설정)해 놓고, html에서 사용
+
+3. abc.css 따로 작성해놓고, html에서 사용
+   Test12_register.css / Test12_register.html   <!-- 요게 예시 02_html5 폴더 아래 있음 -->
+   
+▶ 복합 연산자 : 한 태그에 여러 가지 css을 정의해 놓고 필요한 것만 사용하는 것
+
+  #id
+  .class    (Test.class) <!-- 우리가 자바에서 이렇게 했었지?-->
+  
+  예(아이디로 설정, 클래스로 설정)
+  #a1{color:red; background-color:yellow;}
+  .a2{color:green; background-color:pink;}
+  
+  <form>
+  	<input type="text" id="a1" name="name"> <!--아이디 이름을 적어야 적용이 된다(원래는 name 적었었는데)-->
+  	<input type="text" class="a2" name="name">
+  </form>
+========================================
+  ▷1. head 부분에 넣는 형식
+========================================
+  <head>
+    <style type="text/css">
+	    선택 tag{css tag}
+	    p{background-color:yellow;}
+	    td{color:blue; background-color:white;}
+    </style>
+  </head>
+  
+  실습: Text01.html
+
+========================================
+  ▷2. body 부분에 넣는 방법
+========================================
+  <body>
+    <선택 tag style="style 태그">
+  </body>
+  
+  예제
+  <body>
+    <h2 style="color:green">연습</h2>
+    <p style="color:blue; font-size:15pt">안녕하세요</p>
+  </body>
+  
+  실습 Test02.html
+  
+==========================================
+  ▷3. id, class 사용 : 반드시 head안에서 설정해야 한다
+==========================================
+  # : id로 표현하는 방법
+  . : class로 표현하는 방법
+  
+  예제
+  <head>
+    <style type="text/css">
+      #a1{
+        background-color:blue;
+        font-size:20pt;
+        color:white;
+      }
+      
+      .a2{
+        background-color:cyan;
+        font-size:25pt;
+      }
+      
+      p#a3{   
+        background-color:green;
+        font-size:35pt;
+        color:red;
+      }<!--p태그에 있는 아이디가 a3인 것에만 적용-->
+    </style>
+  </head>
+  
+  실습 : Test03.html
+  
+======================================== 
+  ▷4. 외부 스타일 시트 사용하기
+========================================  
+  Test04.css
+  Test04.html

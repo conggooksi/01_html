@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test.html</title>
+
+<script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  $(function(){
+	$.ajax({
+		type:'POST',
+		url:'test.jsp',
+		//data:"name=류현진&id=ryu",/* 서버로 넘겨줄 파라미터값 */
+		dataType:'html',/* 서버가 보내준 자료 타입 */
+		//dataType:'json', <--json으로 받으려면 이렇게
+		success:function(data){
+			$('div').html(data);
+		}
+	});  
+  });
+</script>
+
+</head>
+<body>
+  <div></div>
+</body>
+</html>

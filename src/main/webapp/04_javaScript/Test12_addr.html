@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test12_addr.html</title>
+
+  <script type="text/javascript">
+    function ss(){
+    	//주소 복사
+    	document.myForm.addr3.value=document.myForm.addr1.value;
+    	document.myForm.addr4.value=document.myForm.addr2.value;
+    }
+  </script>
+</head>
+<body>
+  <form name="myForm">
+    주문자 주소 : <input type="text" name="addr1" id="addr1" size="50"><br>
+    상세주소 : <input type="text" name="addr2" id="addr2" size="10"><br><br>
+    
+    <input type="button" value="위의 주소와 같은 주소" onClick="ss()"><br><br>
+    
+    수신자 주소 : <input type="text" name="addr3" id="addr3" size="50"><br>
+    수신자 상세주소 : <input type="text" name="addr4" id="addr4" size="10">
+  </form>
+</body>
+</html>

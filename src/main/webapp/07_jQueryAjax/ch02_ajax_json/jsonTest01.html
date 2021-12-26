@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jsonTest01.html</title>
+<script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+	  $.getJSON('jsonTest.jsp',function(data){
+		  for(var i in data){
+			  $('<h2></h2>').text(i+":"+data[i])
+			  .appendTo('body');
+		  }//for-end
+	  });
+  });
+</script>
+</head>
+<body>
+
+</body>
+</html>

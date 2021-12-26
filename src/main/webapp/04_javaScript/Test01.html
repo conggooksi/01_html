@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>javaScript 변수 사용 예제</title>
+
+			<script type="text/javascript">
+
+				a = 1;//전역변수, var 생략 가능
+				function aa() {
+					var b = 2;//지역변수
+					document.write("함수 호출전 지역변수:" + b + "<br>");//2
+					document.write("함수 호출전 전역변수:" + a + "<br>");//1
+					bb();//함수호출
+					document.write("함수 호출후 지역변수:" + b + "<br>");//????=2
+					document.write("함수 호출후 전역변수:" + a + "<br>");//100
+				}
+			
+				function bb() {
+					a=100;
+					b=200;
+				}
+			</script>
+		</head>
+	<body>
+		<input type="button" value="함수호출" onClick="aa()">
+		<br>
+		<a href="Test19_back_go.html">Test19</a>
+	</body>
+</html>

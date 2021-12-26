@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test18_date.html</title>
+	<script type="text/javascript">
+		function aa(){
+			today=new Date();//객체생성, 시스템 날짜 구함
+			switch(today.getDay()){
+			case 0: day="일요일"; break;
+			case 1: day="월요일"; break;
+			case 2: day="화요일"; break;
+			case 3: day="수요일"; break;
+			case 4: day="목요일"; break;
+			case 5: day="금요일"; break;
+			case 6: day="토요일"; break;
+			}//switch-end
+			
+			m=today.getFullYear()+"/"+(today.getMonth()+1)+"/"+today.getDate()+" ";
+			m=m+day+" ";
+			m=m+today.getHours()+":"+today.getMinutes()+":"+today.getSeconds()+" ";
+			document.write(m);
+			
+			window.status=m;//상태바에 날짜 시간 표시
+		}//aa()-end
+	</script>
+</head>
+<body onLoad="setInterval('aa()',1000)">
+	<h2>상태바에 날짜 시간 표시</h2>
+
+</body>
+</html>

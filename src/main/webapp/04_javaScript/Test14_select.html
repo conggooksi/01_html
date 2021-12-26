@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Test14_select.html</title>
+</head>
+<!-- 
+onClick : 클릭했을 때 이벤트 발생, 주로 함수 호출
+onFocus : 포커스를 얻을 때 이벤트 발생
+onChange : 값이 변경 될 때 이벤트 발생
+ -->
+<body bgColor="yellow">
+	<form name="myForm">
+		<select name="bb" id="dd" onChange="self.location=this.value">
+			<option>방송국을 선택하시오
+			<option value="http://www.imbc.com">MBC</option>
+			<option value="http://tvn.tving.com">TVN</option>
+			<option value="http://www.sbs.co.kr">SBS</option>
+		</select>
+	</form>
+</body>
+</html>

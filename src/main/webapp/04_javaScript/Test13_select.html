@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test13_select.html</title>
+  <script type="text/javascript">
+    function ss(){
+    	m=document.myForm.job.options.selectedIndex;//선택한 index값 얻기
+    	a1=document.myForm.job.options[m].text;
+    	a2=document.myForm.job.options[m].value;
+    	
+    	alert("text:"+a1+"\nvalue:"+a2);
+    }
+  </script>
+</head>
+<body>
+  <form name="myForm">
+    <select name="job">
+      <option selected>직업선택
+      <option value="교수">교수</option>
+      <option value="학생">학생</option>
+      <option value="변호사">변호사</option>
+      <option value="의사">의사</option>
+      <option value="회사원">회사원</option>
+    </select>
+    <input type="button" value="선택하기" onClick="ss()">
+  </form>
+</body>
+</html>

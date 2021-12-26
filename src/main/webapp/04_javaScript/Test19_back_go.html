@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test19_back_go.html</title>
+
+<script type="text/javascript">
+	//history 객체 : 브라우저로 보았던 사이트를 임시로 저장한다
+	
+	function back(){
+		history.back();//이전으로 
+	}
+	
+	function go(){
+		history.go(-1);//이전으로
+	}
+
+	function go2(){
+		history.go(-2);//이전 이전으로
+	}
+</script>
+</head>
+<body>
+	<form>
+		<input type="button" value="이전(뒤로)" onClick="back()">
+		<input type="button" value="이전(뒤로)" onClick="go()">
+		<input type="button" value="이전 이전(뒤로)" onClick="go2()">
+	</form>
+</body>
+</html>

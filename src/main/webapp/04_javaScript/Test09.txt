@@ -1,0 +1,20 @@
+Test09.txt
+이벤트:마우스나 키보드로 입력할 때 발생하는 신호
+이벤트 핸들러 : 이벤트로 발생한 명령(함수), 이벤트 앞에 on을 붙인다
+
+이벤트 핸들러 종류
+
+onClick : 마우스를 클릭 했을 때 이 이벤트 발생
+onMouseOver : 마우스 커서가 객체에 올려졌을 때 이 이벤트 발생
+onMouseOut : 마우스 커서가 객체에서 out 되었을 때 이 이벤트 발생
+
+onLoad : html page 시작할 때 실행(body태그 에서만 사용 할 수 있다)
+onUnload : html page 종료 시 호출된다(body태그에서만 사용 할 수 있다) 
+
+onChange : 값이 변경 되었을 때 이 이벤트 발생
+
+onBlur : 커서 포커스를 잃었을 때 이 이벤트 발생
+onFocus : 커서 포커스를 얻었을 때 이 이벤트 발생
+
+onKeyUp : 키를 눌렀다가 손을 떼었을 때
+onKeyDown : 키를 눌렀을 때

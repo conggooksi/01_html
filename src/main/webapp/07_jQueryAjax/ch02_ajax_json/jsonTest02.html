@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jsonTest02.html</title>
+
+<script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+	  $.getJSON('jsonTest.jsp',function(data){
+		  $('#name').val(data.name);
+		  $('#gender').val(data.gender);
+		  $('#part').val(data.part);
+	  });
+  });
+</script>
+
+</head>
+<body>
+<form name="ff">
+  <input type="text" name="name" id="name"><br>
+  <input type="text" name="gender" id="gender"><br>
+  <input type="text" name="part" id="part"><br>
+</form>
+</body>
+</html>

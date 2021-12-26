@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test10_handler.html</title>
+
+<script type="text/javascript">
+  function insa1(){
+	  alert("insa1");
+  }
+  function insa2(){
+	  alert("onMouseOver");
+  }
+  function insa3(){
+	  alert("onMouseOut");
+  }
+  function insa4(){
+	  alert("focus를 얻었음");
+  }
+  function insa5(){
+	  alert("focus를 잃었음");
+  }  
+</script>
+</head>
+<body>
+  <input type="button" value="인사1" onClick="insa1()">
+  <input type="button" value="인사2" onMouseOver="insa2()">
+  <input type="button" value="인사3" onMouseOut="insa3()">
+  
+  <input type="button" value="인사4" onFocus="insa4()">
+
+  <input type="text" name="aa" value="인사5" onBlur="insa5()">
+  <input type="text" name="bb" value="인사6">
+</body>
+</html>

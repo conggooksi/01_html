@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test03_tag.html</title>
+<script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+		$("<div>Hello</div>")/* div태그 만든다 */
+		.appendTo(document.body)
+		.css('color','red')
+		.show('show')
+		.hide()
+		.show();
+		
+		//이벤트 처리
+		$("#btn").on('click',function(){
+			$("<button>new button</button>")
+			.addClass("new")
+			.attr("id","id") //속성 attribute
+			.appendTo(".container")
+		});//이벤트처리-end
+		
+		//버튼 삭제
+		$('.container').on('click',"button.new",function(){
+			$(this).remove();
+		});
+		
+	});//function-end
+</script>
+</head>
+<body>
+	<button id="btn">클릭</button>
+	
+	<div class="container"></div>
+</body>
+</html>

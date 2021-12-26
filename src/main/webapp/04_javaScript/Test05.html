@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test05.html</title>
+
+<script type="text/javascript">
+	function check(){
+		if(document.myForm.id.value==''){
+			alert("ID를 입력 하세요");
+			document.myForm.id.focus();
+			return false;
+		}		
+		
+		if(document.myForm.pw.value==''){
+			alert("암호를 입력 하세요");
+			document.myForm.pw.focus();
+			return false;
+		}
+		
+		if(document.myForm.pw2.value==''){
+			alert("암호 확인을 입력 하세요");
+			document.myForm.pw2.focus();
+			return false;
+		}
+		
+		if(document.myForm.pw.value != document.myForm.pw2.value){
+			alert("암호와 암호확인이 다릅니다");
+			document.myForm.pw.value="";
+			document.myForm.pw2.value="";
+			document.myForm.pw.focus();
+			return false;
+		}
+		alert("모든 값이 정상 적으로 입력 되었음");
+	}
+</script>
+</head>
+<body>
+	<form name="myForm" method="GET" action="서버주소">
+	  <table border="1">
+	    <tr>
+	      <td colspan="2" align="center">
+	        <font size="5">회원가입</font>
+	      </td>
+	    </tr>
+	  
+	    <tr>
+	      <td>ID</td>
+	      <td><input type="text" name="id" id="id" placeholder="ID를 입력" required></td>
+	    </tr>
+
+		<tr>
+		  <td>암호</td>
+		  <td><input type="password" name='pw' id="pw" placeholder="암호입력"></td>
+		</tr>
+
+		<tr>
+		  <td>암호확인</td>
+		  <td><input type="password" name="pw2" id="pw2" placeholder="암호확인입력"></td>
+ 		</tr>
+ 		
+ 		<tr>
+ 		  <td colspan="2" align="center">
+ 		    <input type="button" value='회원가입' onClick="check()">
+ 		  </td>
+ 		</tr>
+	</table>
+	
+	</form>
+</body>
+</html>

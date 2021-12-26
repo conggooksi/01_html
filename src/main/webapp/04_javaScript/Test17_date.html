@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test17_date.html</title>
+<script type="text/javascript">
+	function time(){
+		
+		today=new Date();//제공한 객체 사용    ///new java.util.Date() <-- 우리가 java에서 날짜 구하던거
+		
+		//document.write(today.getYear()+"/"+(today.getMonth()+1)+"/"+today.getDate());
+		document.write("<p>");
+		
+		document.write(today.getFullYear()+"/"+(today.getMonth()+1)+"/"+today.getDate());
+		
+		switch(today.getDay()){//요일 구하기
+		case 0:
+			day="일요일";break;
+		case 1:
+			day="월요일";break;
+		case 2:
+			day="화요일";break;
+		case 3:
+			day="수요일";break;
+		case 4:
+			day="목요일";break;
+		case 5:
+			day="금요일";break;
+		case 6:
+			day="토요일";break;
+		}//switch-end
+		
+		document.write("&nbsp;"+day+"&nbsp;");
+		document.write(today.getHours()+":"+today.getMinutes()+":"+today.getSeconds());
+	}
+</script>
+
+</head>
+<body onLoad="time()">
+
+</body>
+</html>

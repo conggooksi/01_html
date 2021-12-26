@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+.red{/* 클래스 사용 */
+	color: red;
+	font-family: 궁서체 바탕체 바탕;
+	text-align: center;
+	font-size: 15pt;
+}
+
+.green{/* 클래스 사용 */
+	color: green;
+	font-family: 궁서체;
+	text-align: right;
+	font-size: 15pt;
+}
+
+.blue{/* 클래스 사용 */
+	color: blue;
+	font-family: 바탕체;
+	text-align: left;
+	font-size: 15pt;
+}
+
+a:link{/*링크*/
+	color: blue;
+	text-decoration: none;
+	font-size: 12pt;
+}
+
+a:visited{/* 방문 후 */
+	color: red;
+	text-decoration: none;
+	font-size: 12pt;
+}
+
+a:active{/* 방문 중 */
+	color: green;
+	text-decoration: none;
+	font-size: 12pt;
+}
+
+a:hover{/* 마우스 커서가 올려 졌을 때 */
+	color: cyan;
+	text-decoration: underline;
+	font-size: 12pt;
+	cursor: pointer;
+}

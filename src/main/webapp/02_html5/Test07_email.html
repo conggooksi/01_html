@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test07_email.html</title>
+</head>
+<body>
+  <form action="Test07.jsp">
+    <label for="email">Email</label>  <!-- 라벨에 for에 쓰는 것과 name이 똑같으면 라벨을 누르면 포커스가 입력창으로 이동된다 -->
+    <input type="email" placeholder="ppp@daum.net" id="email" name="email" required><!-- required="required" "required"생략 가능 -->
+    <br>
+    <label for="email2">Email</label>
+    <input type="text" placeholder="ppp2@daum.net" id="email2" name="email2" required><!-- required="required" "required"생략 가능 -->
+    <!-- placeholder 힌트 -->
+    <!-- required : 필수 입력 -->
+    <!-- name="email" 서버로 넘어가는 것이고 -->
+    <!-- id="email"는 클라이언트에서만 사용 -->
+    
+    <input type="submit" value="전송">
+  </form>
+</body>
+</html>

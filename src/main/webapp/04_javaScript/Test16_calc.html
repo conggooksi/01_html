@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+	
+	<script type="text/javascript">
+	str="";//변수
+	
+	function calc(op){//+ - *  / %
+		a1=document.getElementById("su1").value;
+		a2=document.myform.su2.value;
+		
+ 		b1=eval(a1+op+a2);//****eval()****** 11+22
+ 		
+		//r=document.getElementById("result");//id를 얻어서
+		//r.value=b1;// 값 설정
+		document.getElementById("result").value=b1;
+		
+		document.getElementById("cal").value=op;//연산자 넣으려고
+		
+		str+=a1+op+a2+"="+b1+"\n";
+		document.getElementById("ta1").value=str;
+	}
+	
+	function cls(){
+		document.getElementById("result").value="";
+		document.getElementById("su1").value="";
+		document.getElementById("su2").value="";
+		document.myform.ta1.value="";
+		str="";//변수도 초기화 
+ 	}
+	
+	</script>
+</head>
+<body bgcolor="pink" align="center">
+ <form name="myform">
+   <textarea rows="10" cols="21" id="ta1" name="ta1"></textarea><br>
+   
+   <input type="text"   id="su1" name="su1" size="5">
+   <input type="button" id="cal" name="cal" value="+">
+   <input type="text"   id="su2" name="su2" size="5">
+   <br> 
+   <input type="button" size="3" value="+" onClick="calc(this.value)"> 
+   <input type="button" size="3" value="-" onClick="calc(this.value)"> 
+   <input type="button" size="3" value="*" onClick="calc(this.value)"> 
+   <input type="button" size="3" value="/" onClick="calc(this.value)"> 
+   <input type="button" size="3" value="%" onClick="calc(this.value)">
+   <br>
+    <input type="text" id="result" name="result" size="16">
+    <input type="button" value="c" onClick="cls()">
+    <br>
+  </form>
+</body>
+</html>

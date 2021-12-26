@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test13_form_note.html</title>
+</head>
+<body>
+<!-- 
+  <form>
+    form태그 안에서 사용하는 태그
+    form태그 안의 내용만 ***###서버로###*** 넘어간다
+  </form>
+  
+  <form name="폼이름" method="GET/POST" action="서버주소" encType="인코딩문자">
+  </form>
+  
+  name="폼이름"은 클라이언트 측에서 뭔가를 처리할 때 사용 (데이터 유효성 체크) <-- 데이터를 입력해야 하는데 했는지 안했는지 물어볼 때
+  method="GET/POST"은 GET은 디폴트이다, 소량 데이터 전송시 사용 <--(서버로), id나 pw같은 중요한 데이터는 GET하면 절대 안된다 <-- URL에 다 나타남
+  		   중요한 데이터, 방대한 데이터는 POST방식을 사용해야 한다(반드시)
+  		  Post방식은 데이터를 http내부에 숨겨서 서버로 보낸다
+  		  
+  action="서버주소" : aa.jsp, aa.php, aa.asp
+  
+  encType="인코딩문자", 인코딩 타입을 기술한다, 파일 업로드할 때 사용한다
+  encType="multipart/form-date"
+ -->
+ 
+ ■ form 내부에 쓰여지는 태그들
+ 
+ <input type="text" name="" id="" value="" placeholder="힌트" required size="20"> <!-- 한줄 -->
+ <textarea rows="10" cols="50"></textarea> <!-- 여러줄 쓸 때 -->
+ <input type="password" name=""> <!-- 암호 -->
+ <input type="radio" name=""> <!-- 라디오버튼 쓸 때 -->
+ <input type="checkbox" name="">
+ <input type="file" name=""> <!-- 파일 업로드할 때 -->
+ 
+<select name="">
+	<option selected>선택하세요
+	<option value="@daum.net">@daum.net</option>
+	<option value="@naver.com">@naver.com</option>
+	<option value="@nate.com">@nate.com</option>
+</select> 
+
+
+<input type='submit' value="전송"> <!-- 서버로 전송 하는 명령 -->
+<input type='button' value="" onClick="함수()">
+<input type='reset' value="다시입력|취소">
+
+name="id"   : 서버가 사용할 파라미터 이름==자바변수명==DB필드명
+value="kim" : 서버가 사용할 데이터(값)
+
+
+text     : 텍스트 입력할 때 사용
+password : 암호 입력할 때 사용
+radio    : 라디오 버튼(오직 하나만 선택할 수 있다)
+checkbox : 체크박스(여러개 선택 가능, 하나도 선택 하지 않을 수도 있다)
+file     : 파일 업로드할 때 사용(첨부파일)
+select   : 콤보박스, 리스트
+
+<textarea name="" rows="줄수" cols="칸수"></textarea> <!-- 여러줄 입력 -->
+
+submit   : 서버로 전송하는 명령
+button   : 클라이언트 javaScript함수 호출 할 때 사용  <!-- 자바는 클라이언트 밖에 안되서 javaScript를 공부해야 한다.....? -->
+reset    : form안의 입력한 데이터를 모두 지울 때
+</body>
+</html>

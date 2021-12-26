@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test11_table.html</title>
+</head>
+<!-- 
+노트정리
+<table>  -- 표
+  <tr>  -- 행
+    <td></td>  --칸
+    <td></td>  --칸
+  </tr>
+</table>
+
+<caption>표제목</caption>
+<th>표 소제목</th>
+<tr>행</tr>
+<td>칸</td>
+
+<table cellspacing="2" cellpadding="2">
+cellspacing : 칸과 칸 사이 여백
+cellpadding : 칸 안 쪽 여백
+
+<tr align="left|right|center" valign="top|bottom|middle">
+<td align="left|right|center" valign="top|bottom|middle">
+
+<td colspan="2">..2칸 합치기
+<td rowspan="3">..3행 합치기
+ -->
+<body>
+	<table border="1" cellspacing="0" cellpadding="5">
+		<caption>로그인</caption>
+		<tr>
+			<td colspan='2' align='center'><font size=5>로그인</font></td>
+		</tr>
+		<tr>
+			<td>ID</td>
+			<td><input type="text" name="id" size="20"></td>
+		</tr>
+
+		<tr>
+			<td>암호</td>
+			<td><input type="text" name="id" size="20"></td>
+		</tr>
+
+		<tr>
+			<td colspan="2" align="center"><input type="submit" value="로그인">
+				<input type="reset" value="다시입력"></td>
+		</tr>
+	</table>
+</body>
+</html>

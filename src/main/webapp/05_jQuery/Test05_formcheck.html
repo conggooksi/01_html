@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test05_formcheck.html</title>
+<script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script type="text/javascript">
+	function check(){
+		if($('#id').val()==""){
+			alert("ID를 입력 하시오");
+			$('#id').focus();
+			return false;
+		}	
+		
+		if($("#pw").val()==""){
+			alert("암호를 입력 하시오");
+			$("#pw").focus();
+			return false;
+		}
+		
+		if($('#name').val()==""){
+			alert("이름을 입력 하시오");
+			$('#name').focus();
+			return false;
+		}
+// 		return true;
+		
+	}//function-end
+	
+</script>
+</head>
+<body>
+
+	<form name="myForm" onSubmit="return check()">
+		<table border="1" align="center">
+			<tr>
+				<td colspan="2" align="center">
+					<font size="5"><b>회원가입</b></font>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>ID</td>
+				<td><input type="text" name="id" id="id" placeholder="id입력"  size="20"></td>
+			</tr>
+			
+			<tr>
+				<td>암호</td>
+				<td><input type="password" name="pw" id="pw" placeholder="암호입력"  size="20"></td>
+			</tr>
+			
+			<tr>
+				<td>이름</td>
+				<td><input type="text" name="name" id="name" placeholder="이름입력"  size="30"></td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" value="회원가입"><!-- 서버로 전송 -->
+					<input type="reset" value="취소"><!-- 입력한 값들을 모두 지운다 -->
+				</td>
+			</tr>
+			
+		
+		</table>
+	</form>
+
+</body>
+</html>

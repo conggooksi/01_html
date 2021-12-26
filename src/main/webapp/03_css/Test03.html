@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test03.html</title>
+
+<style type="text/css">
+  #a1 {/* id 사용 */
+	background-color: blue;
+	font-size: 20pt;
+	color: white;
+  }
+
+  .a2 {/* 클래스 사용 */
+	background-color: cyan;
+	font-size: 25pt;
+  }
+
+  p#a3 {/* p태그 안의 #a3 */    
+    background-color:green;
+	font-size: 35pt;
+	color: red;
+  }                     <!--p태그 안에 있는 a3에만 적용-->
+</style>
+</head>
+<body>
+  <p id="a1">안녕하세요</p>
+  <p class="a2">안녕하세요</p>
+  <p id="a3">안녕하세요</p>
+  <br>
+  <br>
+  
+  <table border="1">
+    <tr>
+      <td id="a1">이름</td>
+      <td><input type="text" name="name" class="a2"></td>
+    </tr>
+    
+    <tr>
+      <td id="a1">주소</td>
+      <td><input type="text" name="addr" class="a2"></td>
+      
+    <tr>
+      <td id="a1">이메일</td>
+      <td><input type="text" name="email" class="a2"></td>
+    </tr>
+  </table>
+
+</body>
+</html>

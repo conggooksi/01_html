@@ -1,0 +1,16 @@
+Test13_select.txt
+
+m=document.myForm.job.options.selectedIndex;//선택된 index값 얻는다
+
+document.myForm.job.options[m].text;//m번째 text를 얻는다
+document.myForm.job.options[m].value;//m번 값을 얻는다. 서버로 보내는 값
+
+if(document.myForm.options[m].selected){//m번째가 선택 되었으면
+	처리
+}
+
+<select name="" id="">
+  <option value="010">010</option>
+  <option value="018">018</option>
+  
+</select>

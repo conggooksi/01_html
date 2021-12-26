@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test09_formcheck.html</title>
+<style type="text/css">
+	h2{text-align: center;}
+	table{margin: auto;}
+</style>
+
+<!-- 데이터 유효성 체크, 외부 javaScript 사용 -->
+<script type="text/javascript" src="Test09.js"></script>
+
+<script type="text/javascript">
+	function fo() {
+		//alert("onLoad");
+		document.myForm.name.focus();
+	}
+</script>
+</head>
+<body onLoad="fo()">
+	<form name="myForm" action="서버주소">
+		<table border="1">
+			<tr>
+				<td>이름</td>
+				<td>
+					<input type="text" name="name" id="name" onMouseOver="style='background-color:yellow;'" onMouseOut="style='background-color:white;'">
+				</td>
+			</tr>
+
+			<tr>
+				<td>ID</td>
+				<td>
+					<input type="text" name="id" id="id" onMouseOver="style='background-color:yellow;'" onMouseOut="style='background-color:white;'">
+				</td>
+			</tr>
+
+			<tr>
+				<td>암호</td>
+				<td>
+					<input type="password" name="pw" id="pw">
+				</td>
+			</tr>
+
+			<tr>
+				<td>암호확인</td>
+				<td>
+					<input type="password" name="pw2" id="pw2">
+				</td>
+			</tr>
+
+			<tr>
+				<td>주민번호</td>
+				<td>
+					<input type="text" name="ju1" id="ju1" size="6" maxlength='6' onKeyUp="if(this.value.length==6) myForm.ju2.focus()">- <input type="password" name="ju2" id="ju2" size='7' maxlength="7" onKeyUp="if(this.value.length==7) myForm.email.focus()">
+				</td>
+			</tr>
+
+			<tr>
+				<td>이메일</td>
+				<td>
+					<input type="text" name="email" id="email">
+				</td>
+			</tr>
+			<!--
+      name="email" 서버로 넘길 때 사용
+      id="email" 클라이언트 javaScript에서 사용 
+       -->
+			<tr>
+				<td colspan="2" align="center">
+					<input type="button" value="함수호출" onClick="check()">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

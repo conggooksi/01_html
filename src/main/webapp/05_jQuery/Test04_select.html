@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test04_select.html</title>
+<script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+		var $div_a=$("div#a");
+		console.log($div_a);//F12 누르면 확인 할 수 있다
+		console.log("홍길동");
+		console.log(10+20+30);
+		//
+		$("span").css('color','#87CEEB');
+		$('#a').css('border','2px solid #D2691E');
+		$('#b').css('border','1px solid #0f0');
+		//
+		$('[title="classB"]').css('border','3px solid #FF69B4');
+		//
+		$('body').find('span').css('color','blue');
+		$('body').find('p').css('color','red');
+	});//$-end
+</script>
+</head>
+<body>
+	<div id="a">
+		<div id="b" class="bclass">
+			<p title="classB">p1p1p1</p>
+			<span>span1</span>
+		</div>
+		
+		<div id="c" class="cclass">
+			<p>p2p2p2</p>
+			<span>span2</span>
+		</div>
+	</div>
+
+</body>
+</html>

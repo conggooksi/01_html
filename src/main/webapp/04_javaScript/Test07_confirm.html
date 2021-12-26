@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test07_confirm.html</title>
+</head>
+<body>
+  <script type="text/javascript">
+    
+    var m;//변수
+    m=confirm("내게 메일을 보내시겠습니까?");//확인, 취소
+    if(m==true){//확인
+    	location.replace("mailto:http://www.imbc.com");
+    }else{//취소
+    	location.href="http://www.imbc.com";
+    }
+  </script>
+</body>
+</html>
